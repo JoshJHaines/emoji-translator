@@ -32,6 +32,7 @@ function submitClick(){
                 results.innerText = madlib(inputString)
             }
             if (radio.value === "search"){
+                results.innerText = ""
                 console.log(search(inputString))
                 searchObject = search(inputString)
                 for (index of searchObject){
