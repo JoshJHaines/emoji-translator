@@ -44,12 +44,36 @@ function submitClick(){
                     }
                 }
             } 
+            if (radio.value === "random"){
+                randomTrans = [1, 2, 3, 4]
+                selectedTrans = randomElement(randomTrans)
+                console.log(selectedTrans)
+                if (selectedTrans === 1){
+                    console.log("Should Run Encode function")
+                    results.innerText = encode(inputString)
+                }
+                if (selectedTrans === 2){
+                    console.log("Should Run Translate function")
+                    results.innerText = translate(inputString)
+                }
+                if (selectedTrans === 3){
+                    console.log("Should Run Madlib function")
+                    results.innerText = madlib(inputString)
+                }
+                if (selectedTrans === 4){
+                    console.log("Should Run Search function")
+                    results.innerText = ""
+                    searchObject = search(inputString)
+                    if (searchObject.length === 0){
+                        results.innerText = "No Emojis match your search!"
+                    } else {
+                        for (index of searchObject){
+                            results.innerHTML += `<p>${index.symbol}</p>`
+                        }
+                    }
+                }
+
+            }
         }
     }
-    console.log("The Submit Button WAS clickeded!")
-    console.log("trans input:", inputString)
-    // results.innerText = encode(inputString)
-
-
-
 }
