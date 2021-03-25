@@ -19,5 +19,5 @@ function submitClick(){
     let inputString = translatorInput.value
     console.log("The Submit Button WAS clickeded!")
     console.log("trans input:", inputString)
-    results.innerText = inputString
+    results.innerText = encode(inputString)
 }
