@@ -35,9 +35,13 @@ function submitClick(){
                 results.innerText = ""
                 console.log(search(inputString))
                 searchObject = search(inputString)
-                for (index of searchObject){
-                    console.log(index.symbol)
-                    results.innerHTML += `<p>${index.symbol}</p>`
+                if (searchObject.length === 0){
+                    results.innerText = "No Emojis match your search!"
+                } else {
+                    for (index of searchObject){
+                        console.log(index.symbol)
+                        results.innerHTML += `<p>${index.symbol}</p>`
+                    }
                 }
             } 
         }
