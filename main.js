@@ -50,27 +50,23 @@ function submitClick(){
                 console.log(selectedTrans)
                 if (selectedTrans === 1){
                     console.log("Should Run Encode function")
-                    results.innerText = encode(inputString)
+                    document.getElementById("encode").click()
+                    document.getElementById("submit-button").click()
                 }
                 if (selectedTrans === 2){
                     console.log("Should Run Translate function")
-                    results.innerText = translate(inputString)
+                    document.getElementById("translate").click()
+                    document.getElementById("submit-button").click()
                 }
                 if (selectedTrans === 3){
                     console.log("Should Run Madlib function")
-                    results.innerText = madlib(inputString)
+                    document.getElementById("madlib").click()
+                    document.getElementById("submit-button").click()
                 }
                 if (selectedTrans === 4){
                     console.log("Should Run Search function")
-                    results.innerText = ""
-                    searchObject = search(inputString)
-                    if (searchObject.length === 0){
-                        results.innerText = "No Emojis match your search!"
-                    } else {
-                        for (index of searchObject){
-                            results.innerHTML += `<p>${index.symbol}</p>`
-                        }
-                    }
+                    document.getElementById("search").click()
+                    document.getElementById("submit-button").click()
                 }
 
             }
