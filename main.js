@@ -22,11 +22,24 @@ function submitClick(){
     for (radio of radios){
         if (radio.checked === true){
             console.log("Radio Checked:", radio.value)
+            if (radio.value === "encode"){
+                results.innerText = encode(inputString)
+            }
+            if (radio.value === "translate"){
+                results.innerText = translate(inputString)
+            }
+            if (radio.value === "madlib"){
+                results.innerText = madlib(inputString)
+            }
+            if (radio.value === "search"){
+                console.log(search(inputString))
+            } 
         }
     }
     console.log("The Submit Button WAS clickeded!")
     console.log("trans input:", inputString)
-    results.innerText = encode(inputString)
+    // results.innerText = encode(inputString)
+
 
 
 }
