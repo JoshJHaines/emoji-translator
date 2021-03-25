@@ -4,6 +4,7 @@
  *******************/
 const submitButton = document.getElementById("submit-button")
 const translatorInput = document.getElementById("translator-input")
+const results = document.getElementById("results")
 
 
 /*************************
@@ -18,4 +19,5 @@ function submitClick(){
     let inputString = translatorInput.value
     console.log("The Submit Button WAS clickeded!")
     console.log("trans input:", inputString)
+    results.innerText = inputString
 }
