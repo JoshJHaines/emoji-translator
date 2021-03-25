@@ -33,6 +33,11 @@ function submitClick(){
             }
             if (radio.value === "search"){
                 console.log(search(inputString))
+                searchObject = search(inputString)
+                for (index of searchObject){
+                    console.log(index.symbol)
+                    results.innerHTML += `<p>${index.symbol}</p>`
+                }
             } 
         }
     }
